@@ -16,7 +16,7 @@ module.exports = defineConfig({
   publicPath: './',
   // productionSourceMap: false,
   devServer: {
-    // open: true,
+    // open: true, 自动开启选项
     host: 'localhost',//http://127.0.0.1:5050 http://123.207.210.161:5050
     port: 80, //该网站页面服务所在端口号8080 
     https: false, 
@@ -26,7 +26,7 @@ module.exports = defineConfig({
       '/api|/binary': {
         // target: 'http://123.207.210.161:5050',
         target: 'http://121.43.139.166:3000',
-        // port: '3000',
+        // port: '3000',tianjiayidiandongxi
         //本地IP http://127.0.0.1:5050 http://123.207.210.161:5050
         //远程IP target: 'http://123.207.210.161:5050',
         changeOrigin:true, 
