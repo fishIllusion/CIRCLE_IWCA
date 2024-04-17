@@ -1,0 +1,121 @@
+{
+  "id": "4326579",
+  "name": "myNewProject",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1301389",
+      "name": "邀请",
+      "font_class": "yaoqing",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "4183339",
+      "name": "AK-LN_取消",
+      "font_class": "ln_quxiao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4183340",
+      "name": "AK-LN_正确",
+      "font_class": "ln_zhengque",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "29522610",
+      "name": "13B省略",
+      "font_class": "a-13Bshenglve",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
+      "icon_id": "15391363",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "5199401",
+      "name": "查找",
+      "font_class": "chazhao",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "681206",
+      "name": "圆点中",
+      "font_class": "yuandianzhong",
+      "unicode": "e758",
+      "unicode_decimal": 59224
+    },
+    {
+      "icon_id": "3553996",
+      "name": "月亮",
+      "font_class": "yueliang",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "3874050",
+      "name": "勿扰",
+      "font_class": "wurao",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "37543345",
+      "name": "圆圈选中",
+      "font_class": "yuanquanxuanzhong",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "4608567",
+      "name": "关于我们,笑脸",
+      "font_class": "iconzhengli-",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "7015519",
+      "name": "状态",
+      "font_class": "zhuangtai",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "5387910",
+      "name": "箭头_列表向右_o",
+      "font_class": "jiantou_liebiaoxiangyou_o",
+      "unicode": "eb8a",
+      "unicode_decimal": 60298
+    },
+    {
+      "icon_id": "11982708",
+      "name": "Settings, control, options",
+      "font_class": "Settingscontroloptions",
+      "unicode": "e9d3",
+      "unicode_decimal": 59859
+    },
+    {
+      "icon_id": "11249654",
+      "name": "browser",
+      "font_class": "browser",
+      "unicode": "e832",
+      "unicode_decimal": 59442
+    },
+    {
+      "icon_id": "8721197",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}
