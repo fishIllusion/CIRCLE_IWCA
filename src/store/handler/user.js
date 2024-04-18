@@ -1,7 +1,7 @@
 import store from '..'
 import { getUserInit } from '../../api/index'
 const state = {
-     userInfo: {friends: [], directMes: [], myServers: []},
+     userInfo: {friends: [], directMes: [], myServers: []}
      // name: 'xiaowu'
 }
 
@@ -9,7 +9,7 @@ const mutations = {
      GETUSERINFO(state, data) {
           state.userInfo = data || {}
      },
-     //添加好友请求
+     //添加好友请求,好友添加成功后，
      ADDFRIENDS(state, data) {
           state.userInfo.friends.unshift(data)
      },
@@ -20,6 +20,7 @@ const mutations = {
      //添加我的群组
      ADDMYSERVERS(state, data) {
           state.userInfo.myServers.unshift(data)
+          console.log(state.userInfo.myServers, data, '@@@@@@@');
      }
 }
 
@@ -29,7 +30,6 @@ const actions = {
           let result = await getUserInit(uid)
           commit('GETUSERINFO', result.data)
           // console.log(result);
-
           store.commit('INITCATAGORY', result.data.myServers)
      }
 }

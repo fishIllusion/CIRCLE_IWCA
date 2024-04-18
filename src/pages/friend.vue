@@ -23,11 +23,11 @@
           <i class="iconfont icon-chazhao"></i>
         </div>
         <span class="Count">
-          ONLINE - 1
+          ONLINE - 0
         </span>
         <div class="split"></div>
         <ul class="people">
-          <li>
+          <!-- <li>
             <img src="../assets/background/background2.png" alt="">
             <div class="mes">
               <span>xiaoyuren</span>
@@ -43,58 +43,7 @@
                 <span class="toMessage">More</span>
               </div>
             </div>
-          </li>
-          <li>
-            <img src="../assets/background/background2.png" alt="">
-            <div class="mes">
-              <span>xiaoyuren</span>
-              <span class="statu">online</span>
-            </div>
-            <div class="moreAction">
-              <div class="message item one">
-                <i class="iconfont icon-xiaoxi"></i>
-                <span class="toMessage">Message</span>
-              </div>
-              <div class="action item one">
-                <i class="iconfont icon-a-13Bshenglve"></i>
-                <span class="toMessage">More</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <img src="../assets/background/background2.png" alt="">
-            <div class="mes">
-              <span>xiaoyuren</span>
-              <span class="statu">online</span>
-            </div>
-            <div class="moreAction">
-              <div class="message item one">
-                <i class="iconfont icon-xiaoxi"></i>
-                <span class="toMessage">Message</span>
-              </div>
-              <div class="action item one">
-                <i class="iconfont icon-a-13Bshenglve"></i>
-                <span class="toMessage">More</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <img src="../assets/background/background2.png" alt="">
-            <div class="mes">
-              <span>xiaoyuren</span>
-              <span class="statu">online</span>
-            </div>
-            <div class="moreAction">
-              <div class="message item one">
-                <i class="iconfont icon-xiaoxi"></i>
-                <span class="toMessage">Message</span>
-              </div>
-              <div class="action item one">
-                <i class="iconfont icon-a-13Bshenglve"></i>
-                <span class="toMessage">More</span>
-              </div>
-            </div>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="box-All box option" ref="all">
@@ -179,11 +128,11 @@
           <i class="iconfont icon-chazhao"></i>
         </div>
         <span class="Count">
-          BLOCK - 1
+          BLOCK - 0
         </span>
         <div class="split"></div>
         <ul class="people">
-          <li>
+          <!-- <li>
             <img src="../assets/background/background2.png" alt="">
             <div class="mes">
               <span>xiaoyuren</span>
@@ -199,7 +148,7 @@
                 <span class="toMessage">More</span>
               </div>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

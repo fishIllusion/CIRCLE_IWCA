@@ -12,7 +12,7 @@
                <!-- 用户自己的服务器列表 -->
                <div class="myServers template" v-show="users.userInfo.myServers.length != 0">
                     <div ref="test" class="item" :class="{ 'active': item.sAvatar == 'http://121.43.139.166/icon/logo.png' }"
-                         v-for="(item, index) in users.userInfo.myServers" @click="goMyServer(item.sid, index)">
+                         v-for="(item, index) in users.userInfo.myServers" @click="goMyServer(item.sid, index)" :key="index">
                          <div class="leftLine"></div>
                          <img :src="item.sAvatar" alt="">
                          <div class="text">
@@ -215,7 +215,7 @@ export default defineComponent({
           }
           //打开用户自己创建的服务器
           const goMyServer = (sid, index) => {
-               // console.log(sid);
+               console.log(sid, '我是点击后的sid');
                router.push(`/channels/server/${sid}`)
                getHighLight(index)
           }
@@ -268,8 +268,9 @@ export default defineComponent({
                     store.commit('ADDFRIENDS', { uName: message.fromWho, avatar: message.fromWhoAvatar, uid: message.fromWhoUid })
                }
                if (message.type == 'freqAccepted') {
+                    console.log(message, '&&&&&');
                     store.commit('REMOVEOUTGOING', message.whoAccept)
-                    store.commit('ADDFRIENDS', { uName: message.fromWho, avatar: message.fromWhoAvatar, uid: message.fromWhoUid })
+                    store.commit('ADDFRIENDS', { uName: message.whoAcceptUname, avatar: message.whoAcceptAvatar, uid: message.whoAcceptUid })
                }
           }
           const { openAction } = openDialog('dialog')
@@ -297,7 +298,7 @@ export default defineComponent({
           background-color: rgb(30, 31, 34);
           display: flex;
           flex-direction: column;
-
+          overflow: scroll;
           .one {
                width: 100%;
                display: flex;

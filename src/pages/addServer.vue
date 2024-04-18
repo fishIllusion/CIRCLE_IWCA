@@ -130,9 +130,6 @@ export default {
           }
           //发起创建请求
           const sendToCreate = async () => {
-               // if(create_sname.value == '') {
-               //      sName = default_sname
-               // }
                let data = {
                     sName: create_sname.value == '' ? default_sname : create_sname.value,
                     hostUid: Number(localStorage.user_id_cache),
@@ -149,11 +146,15 @@ export default {
                          sAvatar = imgData.data
                          console.log(sAvatar);
                     }
+                    // console.log(result, '&*$&^%&^*&(*^*%&)');
                     // let sAvatar = result.sAvatar  写了图片上传逻辑再更改
+                    store.commit('ADDMORECATAGORY', result.sid)
                     store.commit('ADDMYSERVERS', { sid: result.sid, sname: create_sname.value, sAvatar })
                     router.push(`/channels/server/${result.sid}`)
-                    console.log(formData);
+                    // console.log(formData, '%%%%')
                     return create_sname.value = ''
+                    // return create_sname.value = ''
+
                }
                create_sname.value = ''
                // console.log(result);

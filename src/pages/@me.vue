@@ -51,11 +51,14 @@ export default {
           const router = useRouter()
           let useMap = useState(['freq', 'users'], mapState)
 
+          console.log(useMap);
           let hostid = localStorage.user_id_cache
           // let pid = uid < hostid?(uid + hostid):(hostid + uid)
           //与某人开启聊天
           const goMes = (uid) => {
+               console.log('uid:',uid,'hostid',hostid);
                let pid = uid < hostid?(uid + hostid):(hostid + uid)
+
                router.push(`/channels/@me/pm/${pid}`)
                localStorage.privateChatUid = uid
           }

@@ -10,10 +10,10 @@ module.exports = defineConfig({
   // assetsDir: "static",
   indexPath: "index.html",
   // filenameHashing: true,
-  // assetsPublicPath: '/',
+  // assetsPublicPath: './',
   transpileDependencies: true,
   // publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
-  publicPath: './',
+  publicPath: '/',
   // productionSourceMap: false,
   devServer: {
     // open: true, 自动开启选项
@@ -25,8 +25,11 @@ module.exports = defineConfig({
     proxy: {
       '/api|/binary': {
         // target: 'http://123.207.210.161:5050',
+
         target: 'http://121.43.139.166:3000',
-        // port: '3000',tianjiayidiandongxi
+        // target: 'http://localhost:3000',
+
+
         //本地IP http://127.0.0.1:5050 http://123.207.210.161:5050
         //远程IP target: 'http://123.207.210.161:5050',
         changeOrigin:true, 

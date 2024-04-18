@@ -4,7 +4,7 @@
                <img src="../assets//logo/logo.png" alt="logo">
                <span>Circle</span>
           </div>
-          <span class="login" @click="goRegister">Sign in</span>
+          <span class="login" @click="goLogin">Sign in</span>
           <div class="loginPanel" id="panel">
                <span class="title">Create Account</span>
                <span class="tip">Own Your Personal Circle Accont</span>
@@ -202,7 +202,7 @@ export default {
           const goHomePage = () => [
                router.push('/')
           ];
-          const goRegister = () => {
+          const goLogin = () => {
                router.push('/login')
           }
           //注册函数
@@ -216,14 +216,17 @@ export default {
                // if((status.accountError==2&&status.pwdError==2&&status.pwdCheckError==2&&formData.email=='') || (status.accountError==2&&status.pwdError==2&&status.pwdCheckError==2&&status.emailError==2)) {
                //      status.errorAll = 1
                // }
-               console.log(status.errorAll);
+               // console.log(status.errorAll);
                if((status.accountError==2&&status.pwdError==2&&status.pwdCheckError==2&&formData.email=='') || (status.accountError==2&&status.pwdError==2&&status.pwdCheckError==2&&status.emailError==2)) {
-                    console.log('good');
                     await APIs.register(JSON.stringify({
                          account: formData.account,
                          pwd: formData.password,
                          email: formData.email
-                    }))
+                    })).then(res => {
+                         if(res.code == 200) {
+                              goLogin()
+                         }
+                    })
                }
           }
 
@@ -268,7 +271,7 @@ export default {
                }
           })
           return {
-               goHomePage, goRegister, formData, status, Register
+               goHomePage, goLogin, formData, status, Register
           }
      }
 }

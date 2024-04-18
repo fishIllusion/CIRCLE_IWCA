@@ -3,11 +3,13 @@
           <div class="left">
                <div class="serverName">
                     <div class="wrap">
-                         <span>{{ middleData.serverName }}</span>
+                         <span>{{ serverDetails.servers[sid].sName }}</span>
+                         <!-- <span>{{ middleData.serverName }}</span> -->
                          <img src="../assets/init-icon-pics/arrow-down-s-line.png" alt="">
                     </div>
                </div>
                <!-- 设置聊天分类 -->
+               <!-- v-if="serverDetails.servers[sid]" -->
                <div class="roomGroup" v-for="(item, Index) in serverDetails.servers[sid].catagory" :key="Index">
                     <div class="groupName">
                          <img src="../assets/init-icon-pics/arrow-down-s-line.png" alt="">
@@ -24,6 +26,7 @@
                     </div>
                </div>
                <!-- 直接聊天室 -->
+               <!-- v-if="serverDetails.servers[sid].directGroups.length != 0" -->
                <div class="container_single" v-if="serverDetails.servers[sid].directGroups.length != 0">
                     <div class="room" v-for="(item, index) in serverDetails.servers[sid].directGroups">
                          <span>#AZUR LANE</span>
@@ -43,7 +46,7 @@ import store from '@/store';
 import { mapState } from 'vuex';
 import { useState } from '../hooks/useState'
 import { openContextMenu } from '@/utils/openMenu';
-import { onMounted } from 'vue';
+import { onMounted, reactive } from 'vue';
 import inviteDialog from '../pages/invite.vue'
 import { openInvite } from '../utils/openDialog'
 import $bus from '@/utils/event_bus'
@@ -62,6 +65,7 @@ export default {
           const methods = {
                //获取当前服务器的信息
                getServerInfo(sid) {
+                    console.log(store.state.serverDetails.servers[sid]);
                     let num = 0
                     for (let i in store.state.serverDetails.servers[sid]) {
                          num++
@@ -74,6 +78,7 @@ export default {
                goMes(gid, catagoryIndex, hidegroupIndex) {
                     store.commit('GETINDEXES', { catagoryIndex, hidegroupIndex })
                     localStorage.GlobalBaseInfo = JSON.stringify({ catagoryIndex, hidegroupIndex })
+                    
                     router.push({
                          path: `/channels/server/${sid}/${gid}`,
                     })

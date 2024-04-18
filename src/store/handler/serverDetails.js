@@ -16,16 +16,22 @@ const mutations = {
           data.forEach(item => {
                state.servers[item.sid] = {catagory: [], directGroups:[]}
           });
+     },
+     //当用户添加一个服务器时触发
+     ADDMORECATAGORY(state, sid) {
+               state.servers[sid] = {catagory: [], directGroups:[]}
      }
 }
 
 
 const actions = {
      async getServerInfo({commit}, sid) {
-          let result = await getServerInfo(sid)
-          commit('GETSERVERINFO', {data: result.data, sid})
-          store.commit('GETSERVERNAME', result.data.sName)
-          // console.log(result.data);
+          await getServerInfo(sid).then(res => {
+               if(res.code == 200) {
+                    commit('GETSERVERINFO', {data: res.data, sid})
+                    store.commit('GETSERVERNAME', res.data.sName)
+               }
+          })
      }
 }
 
